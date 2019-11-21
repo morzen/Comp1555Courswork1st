@@ -64,6 +64,8 @@ public class GUI extends javax.swing.JFrame {
         jTextField5.setEditable(false);
         jTextField6.setEditable(false);
 
+        jTextArea1.setVisible(false);
+        jTextArea1.setEditable(false);
 
 
 
@@ -71,6 +73,10 @@ public class GUI extends javax.swing.JFrame {
 
 
     }
+    
+
+    double miniY;
+    double maxiY;
 
     ArrayList<Double> Temp = new ArrayList<Double>();
 
@@ -142,6 +148,8 @@ public class GUI extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("frame0");
@@ -488,6 +496,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -511,13 +523,15 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(171, 171, 171))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton15)
-                        .addGap(154, 154, 154))))
+                        .addGap(154, 154, 154))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -538,9 +552,13 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(55, 55, 55)
                 .addComponent(jButton15)
                 .addContainerGap(56, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -570,6 +588,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel3.setVisible(false);
         jPanel4.setVisible(true);
         jPanel5.setVisible(false);
+        jTextArea1.setVisible(false);
 
 
 
@@ -675,9 +694,11 @@ public class GUI extends javax.swing.JFrame {
         System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=x-x^2  "+Y);
 
         double minimumY = minY();
+        miniY = minimumY;
         System.out.println("min for f(x)=x-x^2 : "+minimumY);
 
         double maximumY = maxY();
+        maxiY = maximumY;
         System.out.println("max for f(x)=x-x^2 : "+maximumY);
 
 
@@ -717,8 +738,10 @@ public class GUI extends javax.swing.JFrame {
         //double Pinfinite = Y.indexOf(POSITIVE_INFINITY);//  value of infinity in Y for +infinty
 
         double minimumY = minY();
+        miniY = minimumY;
         System.out.println("min: "+minimumY);
         double maximumY = maxY();
+        maxiY = maximumY;
         System.out.println("max: "+maximumY);
 
 
@@ -754,9 +777,11 @@ public class GUI extends javax.swing.JFrame {
         //Plot2d T1 = new Plot2d(X1, Y1);
 
         double minimumY = minY();
+        miniY = minimumY;
         System.out.println("min for f(x)=e^x-3 : "+minimumY);
 
         double maximumY = maxY();
+        maxiY = maximumY;
         System.out.println("max for f(x)=e^x-3 : "+maximumY);
 
 
@@ -1031,6 +1056,7 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         jButton15.setVisible(true);
+        jTextArea1.setVisible(true);
 
         if(FunctionChoosen[0] == 1)
         {
@@ -1060,6 +1086,7 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         jButton15.setVisible(true);
+        jTextArea1.setVisible(true);
 
         if(FunctionChoosen[0] == 1)
         {
@@ -1088,6 +1115,7 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         jButton15.setVisible(true);
+        jTextArea1.setVisible(true);
 
         if(FunctionChoosen[0] == 1)
         {
@@ -1116,6 +1144,7 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         jButton15.setVisible(true);
+        jTextArea1.setVisible(true);
 
         if(FunctionChoosen[0] == 1)
         {    // would zork but don't use linked likst qnd work only for square function
@@ -1160,7 +1189,16 @@ public class GUI extends javax.swing.JFrame {
 
         System.out.println(XYlist);
         graphic.main();
+        jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) + "\n" + "X: "+X + "\n" + "Y: "+Y + "\n" + "minY: "+miniY + "\n" + "maxY: "+maxiY);
 
+                
+//        jTextArea1.setText("X: "+X);
+//        jTextArea1.setText("Y: "+Y);
+//        
+//        jTextArea1.setText("minY: "+miniY);
+//        jTextArea1.setText("maxY: "+maxiY);
+        
+        
     }//GEN-LAST:event_jButton15ActionPerformed
 
 
@@ -1253,6 +1291,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
