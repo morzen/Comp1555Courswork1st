@@ -129,13 +129,28 @@ static double NR2(double x1, double x4)
         
         while(exit != true)
         {
+            
             double x2 = x1 - (F2(x1)/F2derive(x1));
+            System.out.println("first while: " +x2);
             String sx2 = df3.format(x2);
             x2 = Double.parseDouble(sx2);
             results1.add(x2);
             
+            while(Double.isNaN(x2))
+                 { 
+                    
+                     x1 = x1 + 1;
+                     x2 = x1 - (F2(x1)/F2derive(x1));
+                     System.out.println("inside NaN while x1: " +x1);
+                     
+                     System.out.println("inside NaN while x2: " +x2);
+                           
+                 }
+            
+            
             if(x2 == x1)
             {
+                //results1.add(x2);
                 //System.out.println("root: "+ x2);
                 return x2;
                 //exit = true;
@@ -149,7 +164,7 @@ static double NR2(double x1, double x4)
         
         
         
-        //System.out.print(results1);
+        System.out.print(results1);
         
         
     }else

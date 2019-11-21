@@ -82,6 +82,7 @@ public class GUI extends javax.swing.JFrame {
     ArrayList<Double> Temp = new ArrayList<Double>();
 
     double[] ROOT;
+    String Problemo;
 
     ArrayList<ArrayList<Double>> XY = new ArrayList<ArrayList<Double>>();
 
@@ -1066,13 +1067,15 @@ public class GUI extends javax.swing.JFrame {
              System.out.println("NR1 root1: "+root1);
              ROOT = new double[1];
              ROOT[0] = root1;
+             Problemo = " ";
 
         }else if (FunctionChoosen[0] == 2)
         {
-            double root2 = NR2(Temp.get(0), Temp.get(1));
-             System.out.println("NR2 root2: "+root2);
-             ROOT = new double[1];
-             ROOT[0]=root2;
+//            double root2 = NR2(Temp.get(0), Temp.get(1));
+//             System.out.println("NR2 root2: "+root2);
+//             ROOT = new double[1];
+//             ROOT[0]=root2;
+               Problemo = " unable to find the root ";
 
         }else if (FunctionChoosen[0] == 3)
         {
@@ -1080,6 +1083,7 @@ public class GUI extends javax.swing.JFrame {
              System.out.println("N3 root3: "+root3);
              ROOT = new double[1];
              ROOT[0]=root3;
+             Problemo = " ";
 
         }else
         {
@@ -1102,13 +1106,15 @@ public class GUI extends javax.swing.JFrame {
              System.out.println("Secant1 root1: "+root1);
              ROOT = new double[1];
              ROOT[0]=root1;
-
+             Problemo = " ";
+             
         }else if (FunctionChoosen[0] == 2)
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
              System.out.println("Secant2 root2: "+root2);
              ROOT = new double[1];
              ROOT[0]=root2;
+             Problemo = " the root is sometimes correct but not always chek different options ";
 
         }else if (FunctionChoosen[0] == 3)
         {
@@ -1116,6 +1122,7 @@ public class GUI extends javax.swing.JFrame {
              System.out.println("Secant3 root3: "+root3);
              ROOT = new double[1];
              ROOT[0]=root3;
+             Problemo = " ";
 
         }else
         {
@@ -1138,6 +1145,7 @@ public class GUI extends javax.swing.JFrame {
              ROOT = new double[2];
              ROOT[0]=root1 [0];
              ROOT[1]=root1 [1];
+             Problemo = " ";
 
         }else if (FunctionChoosen[0] == 2)
         {
@@ -1146,6 +1154,7 @@ public class GUI extends javax.swing.JFrame {
              ROOT = new double[2];
              ROOT[0]=root2 [0];
              ROOT[1]=root2 [1];
+             Problemo = " ";
 
         }else if (FunctionChoosen[0] == 3)
         {
@@ -1154,6 +1163,7 @@ public class GUI extends javax.swing.JFrame {
              ROOT = new double[2];
              ROOT[0]=root3 [0];
              ROOT[1]=root3 [1];
+             Problemo = " ";
 
         }else
         {
@@ -1177,6 +1187,7 @@ public class GUI extends javax.swing.JFrame {
             ROOT = new double[2];
             ROOT[0]=root1.get(0);
             ROOT[1]=root1.get(1);
+            Problemo = " ";
             
 
         }else if (FunctionChoosen[0] == 2)
@@ -1186,6 +1197,7 @@ public class GUI extends javax.swing.JFrame {
              ROOT = new double[2];
              ROOT[0]=root2.get(0);
              ROOT[1]=root2.get(1);
+             Problemo = " ";
 
         }else if (FunctionChoosen[0] == 3)
         {
@@ -1194,6 +1206,7 @@ public class GUI extends javax.swing.JFrame {
              ROOT = new double[2];
              ROOT[0]=root3.get(0);
              ROOT[1]=root3.get(1);
+             Problemo = " ";
 
         }else
         {
@@ -1227,7 +1240,8 @@ public class GUI extends javax.swing.JFrame {
                 + "\n" + "Y: "+Y 
                 + "\n" + "minY: "+miniY 
                 + "\n" + "maxY: "+maxiY
-                + "\n" + "Roots: "+ Arrays.toString(ROOT));
+                + "\n" + "Roots: "+ Arrays.toString(ROOT)
+                + "\n" + Problemo);
 
                 
 
