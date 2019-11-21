@@ -31,6 +31,7 @@ import static javacoursework1555.rootFinder.Secant2;
 import static javacoursework1555.rootFinder.Secant3;
 import static javacoursework1555.subMenu.step1;
 import java.awt.Graphics;
+import static java.util.Locale.ROOT;
 import static javacoursework1555.graphic.*;
 
 //import javacoursework1555.Plot2d;
@@ -80,6 +81,7 @@ public class GUI extends javax.swing.JFrame {
 
     ArrayList<Double> Temp = new ArrayList<Double>();
 
+    double[] ROOT;
 
     ArrayList<ArrayList<Double>> XY = new ArrayList<ArrayList<Double>>();
 
@@ -1062,16 +1064,22 @@ public class GUI extends javax.swing.JFrame {
         {
             double root1 = NR1(Temp.get(0), Temp.get(1));
              System.out.println("NR1 root1: "+root1);
+             ROOT = new double[1];
+             ROOT[0] = root1;
 
         }else if (FunctionChoosen[0] == 2)
         {
             double root2 = NR2(Temp.get(0), Temp.get(1));
              System.out.println("NR2 root2: "+root2);
+             ROOT = new double[1];
+             ROOT[0]=root2;
 
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = NR3(Temp.get(0), Temp.get(1));
              System.out.println("N3 root3: "+root3);
+             ROOT = new double[1];
+             ROOT[0]=root3;
 
         }else
         {
@@ -1092,16 +1100,22 @@ public class GUI extends javax.swing.JFrame {
         {
             double root1 = Secant1(Temp.get(0), Temp.get(1));
              System.out.println("Secant1 root1: "+root1);
+             ROOT = new double[1];
+             ROOT[0]=root1;
 
         }else if (FunctionChoosen[0] == 2)
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
              System.out.println("Secant2 root2: "+root2);
+             ROOT = new double[1];
+             ROOT[0]=root2;
 
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = Secant3(Temp.get(0), Temp.get(1));
              System.out.println("Secant3 root3: "+root3);
+             ROOT = new double[1];
+             ROOT[0]=root3;
 
         }else
         {
@@ -1121,16 +1135,25 @@ public class GUI extends javax.swing.JFrame {
         {
             double[] root1 = Bisection1(Temp.get(0), Temp.get(1));
              System.out.println("Bisection1 root1: "+Arrays.toString(root1));
+             ROOT = new double[2];
+             ROOT[0]=root1 [0];
+             ROOT[1]=root1 [1];
 
         }else if (FunctionChoosen[0] == 2)
         {
             double[] root2 = Bisection2(Temp.get(0), Temp.get(1));
              System.out.println("Bisection2 root2: "+Arrays.toString(root2));
+             ROOT = new double[2];
+             ROOT[0]=root2 [0];
+             ROOT[1]=root2 [1];
 
         }else if (FunctionChoosen[0] == 3)
         {
             double[] root3 = Bisection3(Temp.get(0), Temp.get(1));
              System.out.println("Bisection3 root3: "+Arrays.toString(root3));
+             ROOT = new double[2];
+             ROOT[0]=root3 [0];
+             ROOT[1]=root3 [1];
 
         }else
         {
@@ -1151,16 +1174,26 @@ public class GUI extends javax.swing.JFrame {
             //double root1 = MyWay(-1, 1, 0);
             LinkedList<Double> root1 = MyWay2(Temp.get(0), Temp.get(1), 1);
             System.out.println("MyWay2 root1"+root1);
+            ROOT = new double[2];
+            ROOT[0]=root1.get(0);
+            ROOT[1]=root1.get(1);
+            
 
         }else if (FunctionChoosen[0] == 2)
         {
             LinkedList<Double> root2 = MyWay2(Temp.get(0), Temp.get(1), 2);
              System.out.println("MyWay2 root2"+root2);
+             ROOT = new double[2];
+             ROOT[0]=root2.get(0);
+             ROOT[1]=root2.get(1);
 
         }else if (FunctionChoosen[0] == 3)
         {
             LinkedList<Double> root3 = MyWay2(Temp.get(0), Temp.get(1), 3);
              System.out.println("MyWay2 root3"+root3);
+             ROOT = new double[2];
+             ROOT[0]=root3.get(0);
+             ROOT[1]=root3.get(1);
 
         }else
         {
@@ -1187,16 +1220,17 @@ public class GUI extends javax.swing.JFrame {
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
 
-        System.out.println(XYlist);
+        //System.out.println("XYlist: "+XYlist);
         graphic.main();
-        jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) + "\n" + "X: "+X + "\n" + "Y: "+Y + "\n" + "minY: "+miniY + "\n" + "maxY: "+maxiY);
+        jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) 
+                + "\n" + "X: "+X 
+                + "\n" + "Y: "+Y 
+                + "\n" + "minY: "+miniY 
+                + "\n" + "maxY: "+maxiY
+                + "\n" + "Roots: "+ Arrays.toString(ROOT));
 
                 
-//        jTextArea1.setText("X: "+X);
-//        jTextArea1.setText("Y: "+Y);
-//        
-//        jTextArea1.setText("minY: "+miniY);
-//        jTextArea1.setText("maxY: "+maxiY);
+
         
         
     }//GEN-LAST:event_jButton15ActionPerformed
@@ -1489,91 +1523,6 @@ public class GUI extends javax.swing.JFrame {
 
 
     }
-
-
-
-
-
-
-
-//    private double maxY()
-//    {
-//
-//        double tryout1 = Y.get(0);
-//        int tryout3 = 0;
-//        int RsizeY = 0;
-//        int sizeY = Y.size();
-//
-//
-//
-//        boolean barnabe = true ;
-//        while(barnabe == true)
-//         {
-//             //System.out.println(RsizeY);
-//             //System.out.println(sizeY);
-//
-//                          if (Y.contains(POSITIVE_INFINITY))
-//             {
-//                 tryout1 = POSITIVE_INFINITY;
-//                 System.out.println("second return ");
-//                 return tryout1;
-//             }
-//
-//             while(Y.get(tryout3) == NaN)
-//             {
-//                 System.out.println("went here");
-//                 tryout3++;
-//             }
-//
-//
-//
-//
-//
-//             if(Y.get(tryout3) != NaN)
-//             {
-//                 if(tryout1 <= Y.get(tryout3))
-//                 {
-//                     System.out.println("tryout1: "+ tryout1 +" <= "+ Y.get(tryout3));
-//                     tryout1 = Y.get(tryout3);
-//
-//                    //System.out.println("pass by here print "+ tryout1);
-//                    //tryout3++;
-//                 }
-//             }
-//
-//
-//
-//
-//             if(RsizeY == sizeY)
-//
-//                  {
-//                      //System.out.println("max list Y in GUI button f(x)=x-x^2  suposidly found");
-//                      System.out.println("first return ");
-//                      return tryout1;
-//                  }
-//
-//
-//
-//
-//
-//
-//             tryout3++;
-//             RsizeY++;
-//
-//
-//
-//         }
-//
-//        System.out.println("third return ");
-//        return tryout1;
-//
-//
-//    }
-
-
-
-
-
 
 
 }
