@@ -45,6 +45,7 @@ import static javacoursework1555.graphic.*;
  */
 public class GUI extends javax.swing.JFrame {
     public static ArrayList<ArrayList<Double>> XYlist = new ArrayList<ArrayList<Double>>();
+    public static ArrayList<Double> Temp2 = new ArrayList<Double>();
     /** Creates new form GUI */
     public GUI() {
         initComponents();
@@ -685,6 +686,9 @@ public class GUI extends javax.swing.JFrame {
             {
                 Temp.add(0, d1);
                 Temp.add(1, d2);
+                
+                Temp2.add(0,Temp.get(0));
+                Temp2.add(1,Temp.get(1));
                 //System.out.println("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1));
             }
 
@@ -705,6 +709,7 @@ public class GUI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         //System.out.println(" graph - f(x)= x-x^2");
+        Temp2.add(2,1.0);
 
         jPanel5.setVisible(true);
 
@@ -730,12 +735,14 @@ public class GUI extends javax.swing.JFrame {
 
         double minimumY = minY();
         miniY = minimumY;
+        Temp2.add(3,minimumY);
         //System.out.println("min for f(x)=x-x^2 : "+minimumY);
 
         double maximumY = maxY();
         maxiY = maximumY;
+        Temp2.add(4,maximumY);
         //System.out.println("max for f(x)=x-x^2 : "+maximumY);
-
+        
 
 
        //Plot2d T1 = new Plot2d(X1, Y1);
@@ -746,6 +753,7 @@ public class GUI extends javax.swing.JFrame {
     ///graph - f(x) = ln(x+1)+ 1
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        Temp2.add(2,2.0);
 
       jPanel5.setVisible(true);
 
@@ -772,9 +780,11 @@ public class GUI extends javax.swing.JFrame {
       
         double minimumY = minY();
         miniY = minimumY;
+        Temp2.add(3,minimumY);
         //System.out.println("min: "+minimumY);
         double maximumY = maxY();
         maxiY = maximumY;
+        Temp2.add(4,maximumY);
         //System.out.println("max: "+maximumY);
 
 
@@ -783,6 +793,7 @@ public class GUI extends javax.swing.JFrame {
     ///graph - f(x) = e^x-3x
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        Temp2.add(2,3.0);
 
 
 
@@ -811,10 +822,12 @@ public class GUI extends javax.swing.JFrame {
 
         double minimumY = minY();
         miniY = minimumY;
+        Temp2.add(3,minimumY);
         //System.out.println("min for f(x)=e^x-3 : "+minimumY);
 
         double maximumY = maxY();
         maxiY = maximumY;
+        Temp2.add(4,maximumY);
         //System.out.println("max for f(x)=e^x-3 : "+maximumY);
 
 
@@ -1097,6 +1110,7 @@ public class GUI extends javax.swing.JFrame {
             
             double root1 = NR1(Temp.get(0), Temp.get(1));
              //System.out.println("NR1 root1: "+root1);
+             Temp2.add(5,root1);
              String r1 = decimalNumb(root1, Ndeci2);
              root1 = Double.parseDouble(r1);
              ROOT = new double[1];
@@ -1109,12 +1123,14 @@ public class GUI extends javax.swing.JFrame {
 //             System.out.println("NR2 root2: "+root2);
 //             ROOT = new double[1];
 //             ROOT[0]=root2;
+               Temp2.add(5,null);
                Problemo = " unable to find the root ";
 
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = NR3(Temp.get(0), Temp.get(1));
              //System.out.println("N3 root3: "+root3);
+             Temp2.add(5,root3);
              String r3 = decimalNumb(root3, Ndeci2);
              root3 = Double.parseDouble(r3);
              ROOT = new double[1];
@@ -1141,6 +1157,7 @@ public class GUI extends javax.swing.JFrame {
         {
             double root1 = Secant1(Temp.get(0), Temp.get(1));
              //System.out.println("Secant1 root1: "+root1);
+             Temp2.add(5,root1);
              String r1 = decimalNumb(root1, Ndeci2);
              root1 = Double.parseDouble(r1);
              ROOT = new double[1];
@@ -1150,6 +1167,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
+            Temp2.add(5,root2);
              //System.out.println("Secant2 root2: "+root2);
              String r2 = decimalNumb(root2, Ndeci2);
              root2 = Double.parseDouble(r2);
@@ -1160,6 +1178,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = Secant3(Temp.get(0), Temp.get(1));
+            Temp2.add(5,root3);
              //System.out.println("Secant3 root3: "+root3);
              String r3 = decimalNumb(root3, Ndeci2);
              root3 = Double.parseDouble(r3);
@@ -1186,6 +1205,8 @@ public class GUI extends javax.swing.JFrame {
         if(FunctionChoosen[0] == 1)
         {
             double[] root1 = Bisection1(Temp.get(0), Temp.get(1));
+            Temp2.add(5,root1[0]);
+            Temp2.add(6,root1[1]);
              //System.out.println("Bisection1 root1: "+Arrays.toString(root1));
              String r1 = decimalNumb(root1[0], Ndeci2);
              double root1bis = Double.parseDouble(r1);
@@ -1200,6 +1221,8 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             double[] root2 = Bisection2(Temp.get(0), Temp.get(1));
+            Temp2.add(5, root2[0]);
+            Temp2.add(6, root2[1]);
              //System.out.println("Bisection2 root2: "+Arrays.toString(root2));
              String r2 = decimalNumb(root2[0], Ndeci2);
              double root2bis = Double.parseDouble(r2);
@@ -1214,6 +1237,8 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             double[] root3 = Bisection3(Temp.get(0), Temp.get(1));
+            Temp2.add(5, root3[0]);
+            Temp2.add(6, root3[1]);
              //System.out.println("Bisection3 root3: "+Arrays.toString(root3));
              String r3 = decimalNumb(root3[0], Ndeci2);
              double root3bis = Double.parseDouble(r3);
@@ -1244,6 +1269,8 @@ public class GUI extends javax.swing.JFrame {
         {    // would zork but don't use linked likst qnd work only for square function
             //double root1 = MyWay(-1, 1, 0);
             LinkedList<Double> root1 = MyWay2(Temp.get(0), Temp.get(1), 1);
+            Temp2.add(5,root1.get(0));
+            Temp2.add(6,root1.get(1));
             //System.out.println("MyWay2 root1"+root1);
             String r1 = decimalNumb(root1.get(0), Ndeci2);
              double root1bis = Double.parseDouble(r1);
@@ -1259,6 +1286,8 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             LinkedList<Double> root2 = MyWay2(Temp.get(0), Temp.get(1), 2);
+            Temp2.add(5,root2.get(0));
+            Temp2.add(6,root2.get(1));
              //System.out.println("MyWay2 root2"+root2);
              String r2 = decimalNumb(root2.get(0), Ndeci2);
              double root2bis = Double.parseDouble(r2);
@@ -1273,6 +1302,8 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             LinkedList<Double> root3 = MyWay2(Temp.get(0), Temp.get(1), 3);
+            Temp2.add(5,root3.get(0));
+            Temp2.add(6,root3.get(1));
              //System.out.println("MyWay2 root3"+root3);
              String r3 = decimalNumb(root3.get(0), Ndeci2);
              double root3bis = Double.parseDouble(r3);

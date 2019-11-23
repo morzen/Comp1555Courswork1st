@@ -31,12 +31,15 @@ public class table{
     String[] ArX;
     String[] ArY;
     
+    ArrayList<Double> intel = GUI.Temp2;
+    String[] Sintel = new String[7];
             
 
 
     
     public void table1() 
     {
+        
         
         JFrame graphframe = new JFrame();
         graphframe.setSize(600, 600);
@@ -67,9 +70,37 @@ public class table{
             ArY[g3] = Double. toString(listY.get(g3));
             g3++;
         }
+        int n = 0;
         
-        
-        
+        while(n != 7)
+        {
+            if(n == 0)
+            {
+                Sintel[n] = "range minX: " + Double.toString(intel.get(n));
+            }else if(n == 1)
+            {
+                Sintel[n] = "range maX: " + Double.toString(intel.get(n));
+            }else if(n == 2)
+            {
+                Sintel[n] = "function: " + Double.toString(intel.get(n));
+            }else if(n == 3)
+            {
+                Sintel[n] = "minY: " + Double.toString(intel.get(n));
+            }else if(n == 4)
+            {
+                Sintel[n] = "maxY: " + Double.toString(intel.get(n));
+            }else if(n == 5)
+            {
+                Sintel[n] = "root1: " + Double.toString(intel.get(n));
+            }else if(n == 6)
+            {
+                Sintel[n] = "root2: " + Double.toString(intel.get(n));
+            }
+            
+            
+            
+            n++;
+        }
         //System.out.println("ArX: "+ Arrays.toString(ArX) +"\n"+"ArY: "+Arrays.toString(ArY));
             
         
@@ -79,9 +110,10 @@ public class table{
     
         model.addColumn(" X ", ArX);
         model.addColumn(" Y ", ArY);
+        model.addColumn("other intel", Sintel );
         
 
-        
+        //System.out.println("list intel: "+Arrays.toString(Sintel));
         
         graphframe.add(new JScrollPane(table1));
         
