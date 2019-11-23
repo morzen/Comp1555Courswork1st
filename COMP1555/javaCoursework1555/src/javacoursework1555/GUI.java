@@ -660,7 +660,7 @@ public class GUI extends javax.swing.JFrame {
             {
                 Temp.add(0, d1);
                 Temp.add(1, d2);
-                System.out.println("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1));
+                //System.out.println("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1));
             }
 
         } catch(Exception e)
@@ -679,7 +679,7 @@ public class GUI extends javax.swing.JFrame {
     ///graph - f(x) = x-x^2
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        System.out.println(" graph - f(x)= x-x^2");
+        //System.out.println(" graph - f(x)= x-x^2");
 
         jPanel5.setVisible(true);
 
@@ -690,7 +690,7 @@ public class GUI extends javax.swing.JFrame {
         double k1 = Temp.get(0);
         double k2 = Temp.get(1);
 
-        System.out.println(k1 +" "+ k2);
+        //System.out.println(k1 +" "+ k2);
 
 
         step1( k, k1, k2);
@@ -699,17 +699,17 @@ public class GUI extends javax.swing.JFrame {
         XYlist = XY;
         //System.out.println("print of XY list in GUI wich should be similar to step1() button selected f(x)=x-x^2  "+XY);
         X = XY.get(0);
-        System.out.println("print of X list which should be similar to step1() first part button selected f(x)=x-x^2   "+X);
+        //System.out.println("print of X list which should be similar to step1() first part button selected f(x)=x-x^2   "+X);
         Y = XY.get(1);
-        System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=x-x^2  "+Y);
+        //System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=x-x^2  "+Y);
 
         double minimumY = minY();
         miniY = minimumY;
-        System.out.println("min for f(x)=x-x^2 : "+minimumY);
+        //System.out.println("min for f(x)=x-x^2 : "+minimumY);
 
         double maximumY = maxY();
         maxiY = maximumY;
-        System.out.println("max for f(x)=x-x^2 : "+maximumY);
+        //System.out.println("max for f(x)=x-x^2 : "+maximumY);
 
 
 
@@ -739,20 +739,18 @@ public class GUI extends javax.swing.JFrame {
       XYlist = XY;
       //System.out.println("print of XY list in GUI wich should be similar to step1() button selected f(x)=ln(x+1)+1  "+XY);
       X = XY.get(0);
-      System.out.println("print of X list which should be similar to step1() first part button selected f(x)=ln(x+1)+1   "+ X);
+      //System.out.println("print of X list which should be similar to step1() first part button selected f(x)=ln(x+1)+1   "+ X);
       Y = XY.get(1);
-      System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=ln(x+1)+1  "+Y);
+      //System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=ln(x+1)+1  "+Y);
 
 
-        //double Ninfinite = Y.indexOf(NEGATIVE_INFINITY);//  value of infinity in Y for -infinty
-        //double Pinfinite = Y.indexOf(POSITIVE_INFINITY);//  value of infinity in Y for +infinty
-
+      
         double minimumY = minY();
         miniY = minimumY;
-        System.out.println("min: "+minimumY);
+        //System.out.println("min: "+minimumY);
         double maximumY = maxY();
         maxiY = maximumY;
-        System.out.println("max: "+maximumY);
+        //System.out.println("max: "+maximumY);
 
 
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -780,19 +778,19 @@ public class GUI extends javax.swing.JFrame {
         XYlist = XY;
         //System.out.println("print of XY list in GUI wich should be similar to step1() button selected f(x)=e^x-3  "+XY);
         X = XY.get(0);
-        System.out.println("print of X list which should be similar to step1() first part button selected f(x)=e^x-3   "+ X);
+        //System.out.println("print of X list which should be similar to step1() first part button selected f(x)=e^x-3   "+ X);
         Y = XY.get(1);
-        System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=e^x-3  "+ Y);
+        //System.out.println("print of Y list which should be similar to step1() first part button selected f(x)=e^x-3  "+ Y);
 
         //Plot2d T1 = new Plot2d(X1, Y1);
 
         double minimumY = minY();
         miniY = minimumY;
-        System.out.println("min for f(x)=e^x-3 : "+minimumY);
+        //System.out.println("min for f(x)=e^x-3 : "+minimumY);
 
         double maximumY = maxY();
         maxiY = maximumY;
-        System.out.println("max for f(x)=e^x-3 : "+maximumY);
+        //System.out.println("max for f(x)=e^x-3 : "+maximumY);
 
 
 
@@ -1071,7 +1069,7 @@ public class GUI extends javax.swing.JFrame {
         if(FunctionChoosen[0] == 1)
         {
             double root1 = NR1(Temp.get(0), Temp.get(1));
-             System.out.println("NR1 root1: "+root1);
+             //System.out.println("NR1 root1: "+root1);
              ROOT = new double[1];
              ROOT[0] = root1;
              Problemo = " ";
@@ -1087,7 +1085,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = NR3(Temp.get(0), Temp.get(1));
-             System.out.println("N3 root3: "+root3);
+             //System.out.println("N3 root3: "+root3);
              ROOT = new double[1];
              ROOT[0]=root3;
              Problemo = " ";
@@ -1110,7 +1108,7 @@ public class GUI extends javax.swing.JFrame {
         if(FunctionChoosen[0] == 1)
         {
             double root1 = Secant1(Temp.get(0), Temp.get(1));
-             System.out.println("Secant1 root1: "+root1);
+             //System.out.println("Secant1 root1: "+root1);
              ROOT = new double[1];
              ROOT[0]=root1;
              Problemo = " ";
@@ -1118,7 +1116,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
-             System.out.println("Secant2 root2: "+root2);
+             //System.out.println("Secant2 root2: "+root2);
              ROOT = new double[1];
              ROOT[0]=root2;
              Problemo = " the root is sometimes correct but not always chek different options ";
@@ -1126,7 +1124,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = Secant3(Temp.get(0), Temp.get(1));
-             System.out.println("Secant3 root3: "+root3);
+             //System.out.println("Secant3 root3: "+root3);
              ROOT = new double[1];
              ROOT[0]=root3;
              Problemo = " ";
@@ -1148,7 +1146,7 @@ public class GUI extends javax.swing.JFrame {
         if(FunctionChoosen[0] == 1)
         {
             double[] root1 = Bisection1(Temp.get(0), Temp.get(1));
-             System.out.println("Bisection1 root1: "+Arrays.toString(root1));
+             //System.out.println("Bisection1 root1: "+Arrays.toString(root1));
              ROOT = new double[2];
              ROOT[0]=root1 [0];
              ROOT[1]=root1 [1];
@@ -1157,7 +1155,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             double[] root2 = Bisection2(Temp.get(0), Temp.get(1));
-             System.out.println("Bisection2 root2: "+Arrays.toString(root2));
+             //System.out.println("Bisection2 root2: "+Arrays.toString(root2));
              ROOT = new double[2];
              ROOT[0]=root2 [0];
              ROOT[1]=root2 [1];
@@ -1166,7 +1164,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             double[] root3 = Bisection3(Temp.get(0), Temp.get(1));
-             System.out.println("Bisection3 root3: "+Arrays.toString(root3));
+             //System.out.println("Bisection3 root3: "+Arrays.toString(root3));
              ROOT = new double[2];
              ROOT[0]=root3 [0];
              ROOT[1]=root3 [1];
@@ -1190,7 +1188,7 @@ public class GUI extends javax.swing.JFrame {
         {    // would zork but don't use linked likst qnd work only for square function
             //double root1 = MyWay(-1, 1, 0);
             LinkedList<Double> root1 = MyWay2(Temp.get(0), Temp.get(1), 1);
-            System.out.println("MyWay2 root1"+root1);
+            //System.out.println("MyWay2 root1"+root1);
             ROOT = new double[2];
             ROOT[0]=root1.get(0);
             ROOT[1]=root1.get(1);
@@ -1200,7 +1198,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 2)
         {
             LinkedList<Double> root2 = MyWay2(Temp.get(0), Temp.get(1), 2);
-             System.out.println("MyWay2 root2"+root2);
+             //System.out.println("MyWay2 root2"+root2);
              ROOT = new double[2];
              ROOT[0]=root2.get(0);
              ROOT[1]=root2.get(1);
@@ -1209,7 +1207,7 @@ public class GUI extends javax.swing.JFrame {
         }else if (FunctionChoosen[0] == 3)
         {
             LinkedList<Double> root3 = MyWay2(Temp.get(0), Temp.get(1), 3);
-             System.out.println("MyWay2 root3"+root3);
+             //System.out.println("MyWay2 root3"+root3);
              ROOT = new double[2];
              ROOT[0]=root3.get(0);
              ROOT[1]=root3.get(1);
@@ -1243,6 +1241,12 @@ public class GUI extends javax.swing.JFrame {
 
         //System.out.println("XYlist: "+XYlist);
         graphic.main();
+        //table.main();
+        
+        table Table = new table();
+        
+        Table.table1();
+        
         jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) 
                 + "\n" + "X: "+X 
                 + "\n" + "Y: "+Y 
