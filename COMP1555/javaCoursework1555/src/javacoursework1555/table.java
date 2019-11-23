@@ -46,7 +46,7 @@ public class table{
    
         //graphframe.setVisible(true);
         
-        System.out.print("listX: "+listX+ "\n" + "listY: "+listY+"\n");
+        //System.out.print("listX: "+listX+ "\n" + "listY: "+listY+"\n");
 
         int g1 = 0;
         int g3 =0;
@@ -70,7 +70,7 @@ public class table{
         
         
         
-        System.out.println("ArX: "+ Arrays.toString(ArX) +"\n"+"ArY: "+Arrays.toString(ArY));
+        //System.out.println("ArX: "+ Arrays.toString(ArX) +"\n"+"ArY: "+Arrays.toString(ArY));
             
         
         graphframe.setTitle(" table ");
@@ -103,75 +103,4 @@ public class table{
   
     
     
-        
-//    JFrame graphframe;
-//    JTable table1;
-//    
-//    ArrayList<ArrayList<Double>> listXY = GUI.XYlist;
-//    ArrayList<Double> listX = listXY.get(0);
-//    ArrayList<Double> listY = listXY.get(1);
-//    String[] ArX;
-//    String[] ArY;
-//    
-//    public void table(String[] args) 
-//    {
-//
-//        int g1 = 0;
-//        int g3 =0;
-//        int g2 = listX.size();
-//    
-//        while(g1 != listX.size())
-//        {     
-//            g1++;
-//        }
-//        
-//        ArX = new String[g1];
-//        ArY = new String[g1];
-//        
-//                
-//        while(g3 != listX.size())
-//        {     
-//            ArX[g3] = Double. toString(listX.get(g3));
-//            ArY[g3] = Double. toString(listY.get(g3));
-//            g3++;
-//        }
-//        
-//    
-//    }
-    
-        
-//    public table()
-//    {
-//        String[][] XY = {ArX, ArY};
-//            
-//        graphframe = new JFrame();
-//        graphframe.setTitle(" table ");
-//    
-//        String[] columnname = { " X ", " Y " };
-//    
-//        table1 = new JTable(XY, columnname);
-//        
-//    } 
-    
-       
-    
-//    public void main() 
-//    {
-//                
-//        String[][] XY = {ArX, ArY};
-//            
-//        graphframe = new JFrame();
-//        graphframe.setTitle(" table ");
-//    
-//        String[] columnname = { " X ", " Y " };
-//    
-//        table1 = new JTable(XY, columnname);
-//        
-//    }
-
-    
-    
-    
-    
-    
-
+  

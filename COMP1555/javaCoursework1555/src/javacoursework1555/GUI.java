@@ -155,6 +155,8 @@ public class GUI extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -465,34 +467,52 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "not choosing","1", "2", "3", "4","5" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("number of decimal:");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton14)
-                        .addGap(46, 46, 46))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(101, 101, 101))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel3)
+                        .addGap(37, 37, 37)))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton14)
+                .addGap(160, 160, 160))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jButton11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
-                    .addComponent(jButton12)))
+                    .addComponent(jButton12)
+                    .addComponent(jButton14)
+                    .addComponent(jButton11))
+                .addContainerGap())
         );
 
         jButton15.setText("see graph");
@@ -515,53 +535,58 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton15)
-                        .addGap(145, 145, 145))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(140, 140, 140)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(156, 156, 156))))
+                        .addGap(182, 182, 182))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton15)
+                        .addGap(180, 180, 180))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 231, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(113, 113, 113))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
+                        .addGap(48, 48, 48)
                         .addComponent(jButton15)
                         .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 90, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 84, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -1065,11 +1090,15 @@ public class GUI extends javax.swing.JFrame {
 
         jButton15.setVisible(true);
         jTextArea1.setVisible(true);
+        int Ndeci2 = (int) jComboBox6.getSelectedIndex();
 
         if(FunctionChoosen[0] == 1)
         {
+            
             double root1 = NR1(Temp.get(0), Temp.get(1));
              //System.out.println("NR1 root1: "+root1);
+             String r1 = decimalNumb(root1, Ndeci2);
+             root1 = Double.parseDouble(r1);
              ROOT = new double[1];
              ROOT[0] = root1;
              Problemo = " ";
@@ -1086,6 +1115,8 @@ public class GUI extends javax.swing.JFrame {
         {
             double root3 = NR3(Temp.get(0), Temp.get(1));
              //System.out.println("N3 root3: "+root3);
+             String r3 = decimalNumb(root3, Ndeci2);
+             root3 = Double.parseDouble(r3);
              ROOT = new double[1];
              ROOT[0]=root3;
              Problemo = " ";
@@ -1104,11 +1135,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton15.setVisible(true);
         jTextArea1.setVisible(true);
-
+        int Ndeci2 = (int) jComboBox6.getSelectedIndex();
+        
         if(FunctionChoosen[0] == 1)
         {
             double root1 = Secant1(Temp.get(0), Temp.get(1));
              //System.out.println("Secant1 root1: "+root1);
+             String r1 = decimalNumb(root1, Ndeci2);
+             root1 = Double.parseDouble(r1);
              ROOT = new double[1];
              ROOT[0]=root1;
              Problemo = " ";
@@ -1117,6 +1151,8 @@ public class GUI extends javax.swing.JFrame {
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
              //System.out.println("Secant2 root2: "+root2);
+             String r2 = decimalNumb(root2, Ndeci2);
+             root2 = Double.parseDouble(r2);
              ROOT = new double[1];
              ROOT[0]=root2;
              Problemo = " the root is sometimes correct but not always chek different options ";
@@ -1125,6 +1161,8 @@ public class GUI extends javax.swing.JFrame {
         {
             double root3 = Secant3(Temp.get(0), Temp.get(1));
              //System.out.println("Secant3 root3: "+root3);
+             String r3 = decimalNumb(root3, Ndeci2);
+             root3 = Double.parseDouble(r3);
              ROOT = new double[1];
              ROOT[0]=root3;
              Problemo = " ";
@@ -1142,32 +1180,49 @@ public class GUI extends javax.swing.JFrame {
 
         jButton15.setVisible(true);
         jTextArea1.setVisible(true);
+        
+        int Ndeci2 = (int) jComboBox6.getSelectedIndex();
 
         if(FunctionChoosen[0] == 1)
         {
             double[] root1 = Bisection1(Temp.get(0), Temp.get(1));
              //System.out.println("Bisection1 root1: "+Arrays.toString(root1));
+             String r1 = decimalNumb(root1[0], Ndeci2);
+             double root1bis = Double.parseDouble(r1);
+             
+             String r1bis = decimalNumb(root1[1], Ndeci2);
+             double root1bisbis = Double.parseDouble(r1bis);
              ROOT = new double[2];
-             ROOT[0]=root1 [0];
-             ROOT[1]=root1 [1];
+             ROOT[0]=root1bis;
+             ROOT[1]=root1bisbis;
              Problemo = " ";
 
         }else if (FunctionChoosen[0] == 2)
         {
             double[] root2 = Bisection2(Temp.get(0), Temp.get(1));
              //System.out.println("Bisection2 root2: "+Arrays.toString(root2));
+             String r2 = decimalNumb(root2[0], Ndeci2);
+             double root2bis = Double.parseDouble(r2);
+             
+             String r2bis = decimalNumb(root2[1], Ndeci2);
+             double root2bisbis = Double.parseDouble(r2bis);
              ROOT = new double[2];
-             ROOT[0]=root2 [0];
-             ROOT[1]=root2 [1];
+             ROOT[0]=root2bis;
+             ROOT[1]=root2bisbis;
              Problemo = " ";
 
         }else if (FunctionChoosen[0] == 3)
         {
             double[] root3 = Bisection3(Temp.get(0), Temp.get(1));
              //System.out.println("Bisection3 root3: "+Arrays.toString(root3));
+             String r3 = decimalNumb(root3[0], Ndeci2);
+             double root3bis = Double.parseDouble(r3);
+             
+             String r3bis = decimalNumb(root3[1], Ndeci2);
+             double root3bisbis = Double.parseDouble(r3bis);
              ROOT = new double[2];
-             ROOT[0]=root3 [0];
-             ROOT[1]=root3 [1];
+             ROOT[0]=root3bis;
+             ROOT[1]=root3bisbis;
              Problemo = " ";
 
         }else
@@ -1183,15 +1238,21 @@ public class GUI extends javax.swing.JFrame {
 
         jButton15.setVisible(true);
         jTextArea1.setVisible(true);
+        int Ndeci2 = (int) jComboBox6.getSelectedIndex();
 
         if(FunctionChoosen[0] == 1)
         {    // would zork but don't use linked likst qnd work only for square function
             //double root1 = MyWay(-1, 1, 0);
             LinkedList<Double> root1 = MyWay2(Temp.get(0), Temp.get(1), 1);
             //System.out.println("MyWay2 root1"+root1);
+            String r1 = decimalNumb(root1.get(0), Ndeci2);
+             double root1bis = Double.parseDouble(r1);
+             
+             String r1bis = decimalNumb(root1.get(1), Ndeci2);
+             double root1bisbis = Double.parseDouble(r1bis);
             ROOT = new double[2];
-            ROOT[0]=root1.get(0);
-            ROOT[1]=root1.get(1);
+            ROOT[0]=root1bis;
+            ROOT[1]=root1bisbis;
             Problemo = " ";
             
 
@@ -1199,18 +1260,28 @@ public class GUI extends javax.swing.JFrame {
         {
             LinkedList<Double> root2 = MyWay2(Temp.get(0), Temp.get(1), 2);
              //System.out.println("MyWay2 root2"+root2);
+             String r2 = decimalNumb(root2.get(0), Ndeci2);
+             double root2bis = Double.parseDouble(r2);
+             
+             String r2bis = decimalNumb(root2.get(1), Ndeci2);
+             double root2bisbis = Double.parseDouble(r2bis);
              ROOT = new double[2];
-             ROOT[0]=root2.get(0);
-             ROOT[1]=root2.get(1);
+             ROOT[0]=root2bis;
+             ROOT[1]=root2bisbis;
              Problemo = " ";
 
         }else if (FunctionChoosen[0] == 3)
         {
             LinkedList<Double> root3 = MyWay2(Temp.get(0), Temp.get(1), 3);
              //System.out.println("MyWay2 root3"+root3);
+             String r3 = decimalNumb(root3.get(0), Ndeci2);
+             double root3bis = Double.parseDouble(r3);
+             
+             String r3bis = decimalNumb(root3.get(1), Ndeci2);
+             double root3bisbis = Double.parseDouble(r3bis);
              ROOT = new double[2];
-             ROOT[0]=root3.get(0);
-             ROOT[1]=root3.get(1);
+             ROOT[0]=root3bis;
+             ROOT[1]=root3bisbis;
              Problemo = " ";
 
         }else
@@ -1260,6 +1331,10 @@ public class GUI extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
 
 
 
@@ -1344,8 +1419,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

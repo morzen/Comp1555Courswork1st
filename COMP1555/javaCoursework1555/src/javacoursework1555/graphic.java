@@ -7,7 +7,7 @@ package javacoursework1555;
 
 /**
  *
- * @author barnabe - modifed by barnabe but original code from https://stackoverflow.com/questions/43970030/graphing-functions
+ * @author barnabe - modifed by barnabe but original code from https://stackoverflow.com/questions/43970030/graphing-functions no intention of plagirise (just put this here in case i  forget)
  */
 
 import java.awt.Graphics;

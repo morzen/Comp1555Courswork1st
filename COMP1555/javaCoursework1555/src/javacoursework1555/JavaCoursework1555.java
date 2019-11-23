@@ -4,19 +4,13 @@
  * and open the template in the editor.
  */
 package javacoursework1555;
-
-
 /**
  *
  * @author barnabe
  */
 public class JavaCoursework1555 
 {
-
     JavaCoursework1555 GUI = new JavaCoursework1555();
- 
-        
-   
 }
 
 
