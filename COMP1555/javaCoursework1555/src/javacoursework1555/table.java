@@ -33,12 +33,13 @@ public class table{
     
     ArrayList<Double> intel = GUI.Temp2;
     String[] Sintel = new String[7];
-            
+    
 
 
     
     public void table1() 
     {
+        System.out.println("empty: "+Arrays.toString(Sintel));
         
         
         JFrame graphframe = new JFrame();
@@ -76,25 +77,37 @@ public class table{
         {
             if(n == 0)
             {
+                System.out.println("0: "+Arrays.toString(Sintel));
                 Sintel[n] = "range minX: " + Double.toString(intel.get(n));
             }else if(n == 1)
             {
+                System.out.println("1: "+Arrays.toString(Sintel));
                 Sintel[n] = "range maX: " + Double.toString(intel.get(n));
             }else if(n == 2)
             {
+                System.out.println("2: "+Arrays.toString(Sintel));
                 Sintel[n] = "function: " + Double.toString(intel.get(n));
             }else if(n == 3)
             {
+                System.out.println("3: "+Arrays.toString(Sintel));
                 Sintel[n] = "minY: " + Double.toString(intel.get(n));
             }else if(n == 4)
             {
+                System.out.println("4: "+Arrays.toString(Sintel));
                 Sintel[n] = "maxY: " + Double.toString(intel.get(n));
             }else if(n == 5)
             {
+                System.out.println("5: "+Arrays.toString(Sintel));
                 Sintel[n] = "root1: " + Double.toString(intel.get(n));
             }else if(n == 6)
             {
+                System.out.println("6: "+Arrays.toString(Sintel));
                 Sintel[n] = "root2: " + Double.toString(intel.get(n));
+            }
+            else
+            {
+                System.out.println("7: "+Arrays.toString(Sintel));
+                return;
             }
             
             

@@ -1284,21 +1284,31 @@ public class GUI extends javax.swing.JFrame {
             
 
         }else if (FunctionChoosen[0] == 2)
-        {
+        {   
+            //System.out.println("MyWay function2 start: ");
             LinkedList<Double> root2 = MyWay2(Temp.get(0), Temp.get(1), 2);
+            //System.out.println("root2.get1: "+root2);
+            //System.out.println("1: "+Temp2);
             Temp2.add(5,root2.get(0));
-            Temp2.add(6,root2.get(1));
+            //System.out.println("2: "+Temp2);
+            Temp2.add(6,root2.get(0));
+            //System.out.println("3: "+Temp2);
+            
              //System.out.println("MyWay2 root2"+root2);
+             
              String r2 = decimalNumb(root2.get(0), Ndeci2);
              double root2bis = Double.parseDouble(r2);
+             //System.out.println("MyWay function2 middle: ");
              
-             String r2bis = decimalNumb(root2.get(1), Ndeci2);
+             String r2bis = decimalNumb(root2.get(0), Ndeci2);
              double root2bisbis = Double.parseDouble(r2bis);
+             
              ROOT = new double[2];
              ROOT[0]=root2bis;
              ROOT[1]=root2bisbis;
              Problemo = " ";
-
+             //System.out.println("MyWay function2 end: ");
+             
         }else if (FunctionChoosen[0] == 3)
         {
             LinkedList<Double> root3 = MyWay2(Temp.get(0), Temp.get(1), 3);
@@ -1348,7 +1358,7 @@ public class GUI extends javax.swing.JFrame {
         table Table = new table();
         
         Table.table1();
-        
+        //System.out.println(" went here ");
         jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) 
                 + "\n" + "X: "+X 
                 + "\n" + "Y: "+Y 
