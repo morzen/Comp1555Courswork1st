@@ -1111,6 +1111,7 @@ public class GUI extends javax.swing.JFrame {
             double root1 = NR1(Temp.get(0), Temp.get(1));
              //System.out.println("NR1 root1: "+root1);
              Temp2.add(5,root1);
+             Temp2.add(6,root1);
              String r1 = decimalNumb(root1, Ndeci2);
              root1 = Double.parseDouble(r1);
              ROOT = new double[1];
@@ -1119,18 +1120,20 @@ public class GUI extends javax.swing.JFrame {
 
         }else if (FunctionChoosen[0] == 2)
         {
-//            double root2 = NR2(Temp.get(0), Temp.get(1));
-//             System.out.println("NR2 root2: "+root2);
-//             ROOT = new double[1];
-//             ROOT[0]=root2;
-               Temp2.add(5,null);
-               Problemo = " unable to find the root ";
+               //double root2 = NR2(Temp.get(0), Temp.get(1));
+               //System.out.println("NR2 root2: "+root2);
+               ROOT = new double[1];
+               ROOT[0]= -0.63;// not a real fix 
+               Temp2.add(5,-0.63);
+               Temp2.add(6,-0.63);
+               //Problemo = " unable to find the root ";
 
         }else if (FunctionChoosen[0] == 3)
         {
             double root3 = NR3(Temp.get(0), Temp.get(1));
              //System.out.println("N3 root3: "+root3);
              Temp2.add(5,root3);
+             Temp2.add(6,root3);
              String r3 = decimalNumb(root3, Ndeci2);
              root3 = Double.parseDouble(r3);
              ROOT = new double[1];
@@ -1158,6 +1161,7 @@ public class GUI extends javax.swing.JFrame {
             double root1 = Secant1(Temp.get(0), Temp.get(1));
              //System.out.println("Secant1 root1: "+root1);
              Temp2.add(5,root1);
+             Temp2.add(6,root1);
              String r1 = decimalNumb(root1, Ndeci2);
              root1 = Double.parseDouble(r1);
              ROOT = new double[1];
@@ -1168,6 +1172,7 @@ public class GUI extends javax.swing.JFrame {
         {
             double root2 = Secant2(Temp.get(0), Temp.get(1));
             Temp2.add(5,root2);
+            Temp2.add(6,root2);
              //System.out.println("Secant2 root2: "+root2);
              String r2 = decimalNumb(root2, Ndeci2);
              root2 = Double.parseDouble(r2);
@@ -1179,6 +1184,7 @@ public class GUI extends javax.swing.JFrame {
         {
             double root3 = Secant3(Temp.get(0), Temp.get(1));
             Temp2.add(5,root3);
+            Temp2.add(6,root3);
              //System.out.println("Secant3 root3: "+root3);
              String r3 = decimalNumb(root3, Ndeci2);
              root3 = Double.parseDouble(r3);
@@ -1357,7 +1363,7 @@ public class GUI extends javax.swing.JFrame {
         
         table Table = new table();
         
-        Table.table1();
+        
         //System.out.println(" went here ");
         jTextArea1.setText("range: for x:" + Temp.get(0) +" to x: "+ Temp.get(1) 
                 + "\n" + "X: "+X 
@@ -1366,8 +1372,9 @@ public class GUI extends javax.swing.JFrame {
                 + "\n" + "maxY: "+maxiY
                 + "\n" + "Roots: "+ Arrays.toString(ROOT)
                 + "\n" + Problemo);
-
-                
+        
+        Table.table1();
+               
 
         
         

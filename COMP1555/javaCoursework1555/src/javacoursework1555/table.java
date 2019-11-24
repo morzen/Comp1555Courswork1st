@@ -39,6 +39,7 @@ public class table{
     
     public void table1() 
     {
+        System.out.println("Temp2 full: "+intel);
         System.out.println("empty: "+Arrays.toString(Sintel));
         
         
@@ -106,7 +107,7 @@ public class table{
             }
             else
             {
-                System.out.println("7: "+Arrays.toString(Sintel));
+                //System.out.println("7: "+Arrays.toString(Sintel));
                 return;
             }
             
@@ -114,7 +115,7 @@ public class table{
             
             n++;
         }
-        //System.out.println("ArX: "+ Arrays.toString(ArX) +"\n"+"ArY: "+Arrays.toString(ArY));
+        System.out.println("ArX: "+ Arrays.toString(ArX) +"\n"+"ArY: "+Arrays.toString(ArY));
             
         
         graphframe.setTitle(" table ");
