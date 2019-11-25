@@ -1135,6 +1135,11 @@ public class GUI extends javax.swing.JFrame {
                ROOT[0]= root2;//-0.63;// not a real fix 
                Temp2.add(5,root2);
                Temp2.add(6,root2);
+               if(Temp.get(1) < -0.999)
+               {
+                   Temp2.add(5,null);
+                   Temp2.add(6,null);
+               }
                Problemo = "  ";
 
         }else if (FunctionChoosen[0] == 3)
