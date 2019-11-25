@@ -1134,8 +1134,8 @@ public class GUI extends javax.swing.JFrame {
                ROOT = new double[1];
                ROOT[0]= root2;//-0.63;// not a real fix 
                Temp2.add(5,root2);
-               Temp2.add(6,-0.63);
-               Problemo = " unable to find the root ";
+               Temp2.add(6,root2);
+               Problemo = "  ";
 
         }else if (FunctionChoosen[0] == 3)
         {
