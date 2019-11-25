@@ -770,6 +770,11 @@ public class GUI extends javax.swing.JFrame {
 
       //System.out.println(k1 +" "+ k2);
 
+      if(k1 < -1)
+      {
+          k1 = -0.9999;
+      }
+      
       step1( k, k1, k2);
       //System.out.println("print of step1() in GUI for f(x)=ln(x+1)+1   "+ step1( k, k1, k2));
       XY = (step1(k, k1, k2));
@@ -1124,13 +1129,13 @@ public class GUI extends javax.swing.JFrame {
 
         }else if (FunctionChoosen[0] == 2)
         {
-               //double root2 = NR2(Temp.get(0), Temp.get(1));
-               //System.out.println("NR2 root2: "+root2);
+               double root2 = NR2(Temp.get(0), Temp.get(1));
+               System.out.println("NR2 root2: "+root2);
                ROOT = new double[1];
-               ROOT[0]= -0.63;// not a real fix 
-               Temp2.add(5,-0.63);
+               ROOT[0]= root2;//-0.63;// not a real fix 
+               Temp2.add(5,root2);
                Temp2.add(6,-0.63);
-               //Problemo = " unable to find the root ";
+               Problemo = " unable to find the root ";
 
         }else if (FunctionChoosen[0] == 3)
         {

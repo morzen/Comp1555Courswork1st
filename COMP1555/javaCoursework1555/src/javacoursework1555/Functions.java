@@ -57,17 +57,17 @@ public class Functions
     static double F2(double a)
     {
         
-        a = ln( a + 1 ) + 1;
+        return ln( a + 1 ) + 1;
         //System.out.println("1" + a);
-        return a;
+        //return a;
         
     }
     
-    // derivative of F2 f'(x) = 1 / x + 1
+    // derivative of F2 f'(x) = 1 / (x + 1)
     static double F2derive(double a)
     {
     
-        a = 1 / a+1;
+        a = 1 / (a+1);
         return a;
     
     }
