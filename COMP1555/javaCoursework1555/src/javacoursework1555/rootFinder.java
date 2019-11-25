@@ -200,6 +200,7 @@ public class rootFinder {
     // for f(x)=ln(x+1)+1
     static double Secant2(double x1, double x2) {
 
+        x1 = -1;
         double[] listSecant2 = {x1, x2};
 
         try {
@@ -209,14 +210,14 @@ public class rootFinder {
                 //Secant method formula
                 // x1 = xn-z // x2 = xn // x3 = xn+1
                 //xn+1 = xn - (f(xn)   /[  f(xn)  -  f(xn-1) / xn-xn-1])
-                double x3 = (x2 - (F2(x2) / ((F2(x2) - F2(x1)) / (x2 - x1))));
+                double x3 = (x2 - ((F2(x2) / ((F2(x2) - F2(x1)) / (x2 - x1)))));
 
                 while (Double.isNaN(x3)) {
 
                     x1 = x1 + 1;
                     x2 = x2 + 1;
                     x3 = (x2 - (F2(x2) / ((F2(x2) - F2(x1)) / (x2 - x1))));
-                    //System.out.println(x3);
+                    //System.out.println("x3: "+x3);
 
                 }
 
@@ -235,12 +236,12 @@ public class rootFinder {
                 x1 = x2;
                 x2 = x3;
 
-                //System.out.println("x1: "+ x1);
-                //System.out.println("x2: "+ x2);
-                //System.out.println("x3: "+ x3);
+                System.out.println("x1: "+ x1);
+                System.out.println("x2: "+ x2);
+                System.out.println("x3: "+ x3);
             }
 
-            //System.out.println(Arrays.toString(listSecant2));
+            System.out.println("listsecant2: "+Arrays.toString(listSecant2));
         } catch (Exception e) {
             System.out.println("oops it seem there is not root for this function");
         }

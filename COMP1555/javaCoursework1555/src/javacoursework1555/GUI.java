@@ -1187,7 +1187,7 @@ public class GUI extends javax.swing.JFrame {
              root2 = Double.parseDouble(r2);
              ROOT = new double[1];
              ROOT[0]=root2;
-             Problemo = " the root is sometimes correct but not always chek different options ";
+             Problemo = " root = -0.63 the root aren't correct for unknown reason our best developper are on to it  ";
 
         }else if (FunctionChoosen[0] == 3)
         {
